@@ -7,29 +7,29 @@ Flash AIR Native Extension:  QRCode reader/decoder which accept BitmapData, ther
 Setup in application.xml
 ========================
 for Android, include the followings inside &lt;android&gt;&lt;manifestAdditions&gt;...&lt;/manifestAdditions&gt;&lt;/android&gt;<br />
-　<code>&#09;&lt;uses-permission android:name="android.permission.CAMERA"/&gt;<br />
-　&#09;&lt;uses-feature android:name="android.hardware.camera" /&gt;</code><br />
-for both iOS and Android, include the followings inside &lt;extensions&gt;...&lt;/extensions&gt;<br />
-　<code>&#09;&lt;extensionID&gt;com.kcly.ane.bitmapdataqrcodescanner&lt;/extensionID&gt;</code><br />
+　<code>&#09;&lt;uses-permission android:name="android.permission.CAMERA"/&gt;
+　&#09;&lt;uses-feature android:name="android.hardware.camera" /&gt;</code>
+for both iOS and Android, include the followings inside &lt;extensions&gt;...&lt;/extensions&gt;
+　<code>&#09;&lt;extensionID&gt;com.kcly.ane.bitmapdataqrcodescanner&lt;/extensionID&gt;</code>
 for Flash, add this swc<br />
 　<code>&#09;com.kcly.ane.bitmapdataqrcodescanner.swc</code><br />
 Usage
 =====
 <code>
-import com.kcly.ane.bitmapdataqrcodescanner.Scanner;<br />
-import com.kcly.ane.bitmapdataqrcodescanner.ScannerEvent;<br />
+import com.kcly.ane.bitmapdataqrcodescanner.Scanner;
+import com.kcly.ane.bitmapdataqrcodescanner.ScannerEvent;
 ...
 
-scanner = new Scanner();<br />
-scanner.addEventListener(ScannerEvent.SCAN, onScanFound);<br />
+scanner = new Scanner();
+scanner.addEventListener(ScannerEvent.SCAN, onScanFound);
 ...
 
 scanner.scan(bmpData);
 
 ...
 
-private function onScanFound(evt:ScannerEvent):void {<br />
-　&#09;trace ('onScanFound: ', evt.data);<br />
+private function onScanFound(evt:ScannerEvent):void {
+　&#09;trace ('onScanFound: ', evt.data);
 }
 </code>
 Note
