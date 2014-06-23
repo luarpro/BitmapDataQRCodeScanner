@@ -7,15 +7,15 @@ Flash AIR Native Extension:  QRCode reader/decoder which accept BitmapData, ther
 Setup in application.xml
 ========================
 for Android, include the followings inside &lt;android&gt;&lt;manifestAdditions&gt;...&lt;/manifestAdditions&gt;&lt;/android&gt;<br />
-　&#09;&lt;uses-permission android:name="android.permission.CAMERA"/&gt;<br />
-　&#09;&lt;uses-feature android:name="android.hardware.camera" /&gt;<br />
+　<code>&#09;&lt;uses-permission android:name="android.permission.CAMERA"/&gt;<br />
+　&#09;&lt;uses-feature android:name="android.hardware.camera" /&gt;</code><br />
 for both iOS and Android, include the followings inside &lt;extensions&gt;...&lt;/extensions&gt;<br />
-　&#09;&lt;extensionID&gt;com.kcly.ane.bitmapdataqrcodescanner&lt;/extensionID&gt;<br />
+　<code>&#09;&lt;extensionID&gt;com.kcly.ane.bitmapdataqrcodescanner&lt;/extensionID&gt;</code><br />
 for Flash, add this swc<br />
-　&#09;com.kcly.ane.bitmapdataqrcodescanner.swc<br />
+　<code>&#09;com.kcly.ane.bitmapdataqrcodescanner.swc</code><br />
 Usage
 =====
-
+<code>
 import com.kcly.ane.bitmapdataqrcodescanner.Scanner;<br />
 import com.kcly.ane.bitmapdataqrcodescanner.ScannerEvent;<br />
 ...
@@ -31,7 +31,7 @@ scanner.scan(bmpData);
 private function onScanFound(evt:ScannerEvent):void {<br />
 　&#09;trace ('onScanFound: ', evt.data);<br />
 }
-
+</code>
 Note
 ====
 If you want a continous scanning, you can use Enterframe, setInterval, Timer whatever you like to call scanner.scan(bmpData) 
