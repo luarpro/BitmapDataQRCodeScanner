@@ -14,7 +14,6 @@ package {
 	import flash.ui.Multitouch;
 	import flash.ui.MultitouchInputMode;
 	import flash.utils.setInterval;
-	//import flash.display.Bitmap;
 	
 	public class Demo extends Sprite {
 		private var scanner:Scanner;
@@ -22,7 +21,6 @@ package {
 		private var bmpData:BitmapData;
 		private var video:Video;
 		private var sp:Sprite;
-		//private var bmp:Bitmap;
 		
 		public function Demo():void {
 			stage.scaleMode = StageScaleMode.NO_SCALE;
@@ -57,13 +55,6 @@ package {
 			
 			bmpData = new BitmapData(sp.width, sp.height, false, 0);
 			
-			/*bmp = new Bitmap(bmpData);
-			bmp.width = stageW / 2;
-			bmp.height = vidH / 2;
-			bmp.x = stageW - bmp.width;
-			bmp.y = stage.fullScreenHeight - bmp.height;
-			addChild(bmp);*/
-			
 			tf = new TextField;
 			tf.multiline = tf.wordWrap = true;
 			tf.y = sp.height;
@@ -71,7 +62,7 @@ package {
 			
 			var tfmt:TextFormat = new TextFormat
 			tfmt.font = "Arial"
-			tfmt.size = 32;
+			tfmt.size = 48;
 			tf.defaultTextFormat = tfmt;
 			
 			tf.text = "Scanning...";
