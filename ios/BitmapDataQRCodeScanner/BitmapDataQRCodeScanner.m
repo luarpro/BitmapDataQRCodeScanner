@@ -1,8 +1,6 @@
 #import "FlashRuntimeExtensions.h"
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "zbar.h"
-#import "ZBarReaderController.h"
 
 FREObject scan(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]) {
     ZBarReaderController *reader = nil;
