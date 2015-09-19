@@ -40,5 +40,5 @@ If you want a continous scanning, you can use Enterframe, setInterval, Timer wha
 
 Credit
 ======
-Native Extension template forked from https://github.com/saumitrabhave/qr-zbar-ane
+Native Extension template forked from https://github.com/saumitrabhave/qr-zbar-ane<br>
 ZBar 64-Bit version from https://markobl.com/2015/03/27/zbar-sdk-64-bit-for-iphone-6-and-ios-8-download/
